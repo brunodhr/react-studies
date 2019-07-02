@@ -11,4 +11,8 @@ storiesOf('Button', module)
         😀 😎 👍 💯
       </span>
     </Button>
+  ))
+  .add('Óbviamente, com o xD', () => <Button>xD</Button>)
+  .add('Será que dá com função', () => (
+    <Button onClick={alert('aaa')}>Será</Button>
   ));
