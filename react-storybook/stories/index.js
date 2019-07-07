@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import Button from 'components/Button';
+import Home from 'pages/Home';
 
 storiesOf('Button', module)
   .add('with text', () => <Button>Hello Button</Button>)
@@ -16,3 +17,9 @@ storiesOf('Button', module)
   .add('Será que dá com função', () => (
     <Button onClick={alert('aaa')}>Será</Button>
   ));
+
+storiesOf('Home', module).add('Teste de página', () => (
+  <Home>
+    <Button>teste</Button>
+  </Home>
+));
