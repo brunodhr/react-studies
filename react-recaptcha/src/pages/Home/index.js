@@ -1,7 +1,13 @@
 import React from 'react';
-
+import Recaptcha from 'components/Recaptcha';
 import { Container } from './styles';
 
-const Home = () => <Container>asdasd</Container>;
+const Home = () => {
+  return (
+    <Container>
+      <Recaptcha />
+    </Container>
+  );
+};
 
 export default Home;
