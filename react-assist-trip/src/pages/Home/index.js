@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <>
       <div>Home Page</div>
-      <Button onClick={handlePeoples}>Pegar locais</Button>
+      <Button onClick={handlePeoples} content="Pegar locais" />
     </>
   );
 };
