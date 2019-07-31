@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledButton = styled.button`
   background-color: #ffbf0b;
@@ -6,6 +6,6 @@ export const StyledButton = styled.button`
   color: #583807;
   width: 270px;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding: 17px 15px 17px 15px;
-`;
+`
