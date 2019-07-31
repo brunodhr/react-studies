@@ -30,10 +30,7 @@ const Home = () => {
     event.preventDefault()
 
     const response = await API.get('base/destinations', axiosConfig)
-
-    console.log(response.data)
-    // setPlaces(...response)
-    console.log(places)
+    setPlaces(response.data)
   }
   return (
     <>
