@@ -1,25 +1,14 @@
 import React from 'react'
-
+import Counter from 'components/counter'
 import Button from 'components/Button'
 import { useSelector, useDispatch } from 'react-redux'
 import { getPlaces } from 'store/thunks/places'
+
 // import { Container } from './styles';
 
 const Home = () => {
   const places = useSelector(state => state.places.places)
   const dispatch = useDispatch()
-      id: 1,
-      name: 'teste'
-    },
-    {
-      id: 2,
-      name: 'teste'
-    },
-    {
-      id: 3,
-      name: 'teste'
-    }
-  ])
 
   const handlePeoples = async event => {
     event.preventDefault()
@@ -28,8 +17,9 @@ const Home = () => {
   }
   return (
     <>
+      <Counter />
       <div>Home Page</div>
-      <Button onClick={handlePeoples} content='Pegar locais' />
+      <Button onClick={handlePeoples} content="Pegar locais" />
       {places &&
         places.map((place, index) => <h1 key={index}> {place.name} </h1>)}
     </>
