@@ -19,12 +19,6 @@ const Home = () => {
       name: 'teste'
     }
   ])
-  const axiosConfig = {
-    headers: {
-      accept: 'application/json',
-      authorization: 'Basic ZGVtbzozIzJTdFpUJDVFcm5HWVpV'
-    }
-  }
 
   const handlePeoples = async event => {
     event.preventDefault()
