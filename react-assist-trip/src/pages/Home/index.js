@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import API from 'utils/api'
 import Button from 'components/Button'
+import { useSelector, useDispatch } from 'react-redux'
+import { getPlaces } from 'store/thunks/places'
 // import { Container } from './styles';
 
 const Home = () => {
-  const [places, setPlaces] = useState([
-    {
+  const places = useSelector(state => state.places.places)
+  const dispatch = useDispatch()
       id: 1,
       name: 'teste'
     },
@@ -23,8 +24,7 @@ const Home = () => {
   const handlePeoples = async event => {
     event.preventDefault()
 
-    const response = await API.get('base/destinations', axiosConfig)
-    setPlaces(response.data)
+    dispatch(getPlaces())
   }
   return (
     <>
