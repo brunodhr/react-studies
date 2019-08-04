@@ -1,5 +1,4 @@
 import React from 'react'
-import Counter from 'components/counter'
 import Button from 'components/Button'
 import { useSelector, useDispatch } from 'react-redux'
 import { getPlaces } from 'store/thunks/places'
@@ -17,11 +16,16 @@ const Home = () => {
   }
   return (
     <>
-      <Counter />
       <div>Home Page</div>
-      <Button onClick={handlePeoples} content="Pegar locais" />
-      {places &&
-        places.map((place, index) => <h1 key={index}> {place.name} </h1>)}
+      <Button onClick={handlePeoples} content='Pegar locais' />
+      <select>
+        {places &&
+          places.map((place, index) => (
+            <option key={index} value={place.name}>
+              {place.name}
+            </option>
+          ))}
+      </select>
     </>
   )
 }
