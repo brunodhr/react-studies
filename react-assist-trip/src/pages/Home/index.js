@@ -12,19 +12,21 @@ const Home = () => {
   useEffect(() => {
     dispatch(getPlaces())
   }, [dispatch])
+
   return (
     <>
-      <div>Home Page</div>
-      <select>
-        {loading
-          ? 'Carregando'
-          : places &&
+      {loading ? (
+        'Carregando'
+      ) : (
+        <select>
+          {places &&
             places.map((place, index) => (
               <option key={index} value={place.name}>
                 {place.name}
               </option>
             ))}
-      </select>
+        </select>
+      )}
     </>
   )
 }
