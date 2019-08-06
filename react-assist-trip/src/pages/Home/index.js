@@ -1,5 +1,4 @@
-import React from 'react'
-import Button from 'components/Button'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getPlaces } from 'store/thunks/places'
 
@@ -9,15 +8,12 @@ const Home = () => {
   const places = useSelector(state => state.places.places)
   const dispatch = useDispatch()
 
-  const handlePeoples = async event => {
-    event.preventDefault()
-
+  useEffect(() => {
     dispatch(getPlaces())
-  }
+  }, [])
   return (
     <>
       <div>Home Page</div>
-      <Button onClick={handlePeoples} content='Pegar locais' />
       <select>
         {places &&
           places.map((place, index) => (
