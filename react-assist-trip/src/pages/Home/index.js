@@ -6,21 +6,24 @@ import { getPlaces } from 'store/thunks/places'
 
 const Home = () => {
   const places = useSelector(state => state.places.places)
+  const loading = useSelector(state => state.places.loading)
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getPlaces())
-  }, [])
+  }, [dispatch])
   return (
     <>
       <div>Home Page</div>
       <select>
-        {places &&
-          places.map((place, index) => (
-            <option key={index} value={place.name}>
-              {place.name}
-            </option>
-          ))}
+        {loading
+          ? 'Carregando'
+          : places &&
+            places.map((place, index) => (
+              <option key={index} value={place.name}>
+                {place.name}
+              </option>
+            ))}
       </select>
     </>
   )
