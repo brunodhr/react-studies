@@ -6,7 +6,7 @@ import { getProducts } from 'store/thunks/products'
 
 const Products = () => {
   const products = useSelector(state => state.products.products)
-  const loading = useSelector(state => state.places.loading)
+  const loading = useSelector(state => state.products.loading)
 
   const dispatch = useDispatch()
 
@@ -22,9 +22,7 @@ const Products = () => {
         <div>
           {products &&
             products.map((product, index) => (
-              <span key={index} value={product.name}>
-                {product.name}
-              </span>
+              <span key={index}>{product.name}</span>
             ))}
         </div>
       )}
