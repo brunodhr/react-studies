@@ -22,7 +22,15 @@ const Products = () => {
         <div>
           {products &&
             products.map((product, index) => (
-              <span key={index}>{product.name}</span>
+              <>
+                <h1 key={index}>{product.name}</h1>
+                <h3>Coverages:</h3>
+                <ul>
+                  {product.coverages.map((coverage, index) => (
+                    <li key={index}>{coverage.display_name_ptbr}</li>
+                  ))}
+                </ul>
+              </>
             ))}
         </div>
       )}
