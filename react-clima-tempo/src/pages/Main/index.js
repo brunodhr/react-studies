@@ -1,6 +1,6 @@
 import React from 'react'
-import Cities from 'components/Cities'
+import Locale from 'components/Locale'
 
-const Main = () => <Cities />
+const Main = () => <Locale />
 
 export default Main

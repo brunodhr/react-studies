@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import cities from './cities'
+import locale from './locale'
 
 const reducers = combineReducers({
-  cities: cities
+  locale: locale
 })
 
 export default reducers
