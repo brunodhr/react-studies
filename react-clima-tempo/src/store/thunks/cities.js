@@ -11,7 +11,6 @@ export const getCities = () => async dispatch => {
     const response = await API.get(
       'locale/city/3477?token=8b19cc6adeddd4f207dcc2a45fe2688b'
     )
-    console.log('aosdfijaosif', response)
     dispatch(setCitiesSuccess(response.data))
   } catch (error) {
     dispatch(setCitiesError(error))
