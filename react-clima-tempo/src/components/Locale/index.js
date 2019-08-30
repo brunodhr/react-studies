@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { getLocale } from 'store/thunks/locale'
 
+import * as S from './styles'
+
 const Locale = () => {
   const locale = useSelector(state => state.locale.locale)
   const loading = useSelector(state => state.locale.loading)
