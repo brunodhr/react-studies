@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/clima-tempo/static/js/main.24198fa2.chunk.js",
+    "main.js.map": "/clima-tempo/static/js/main.24198fa2.chunk.js.map",
+    "runtime~main.js": "/clima-tempo/static/js/runtime~main.488da64f.js",
+    "runtime~main.js.map": "/clima-tempo/static/js/runtime~main.488da64f.js.map",
+    "static/js/2.7f7cdf52.chunk.js": "/clima-tempo/static/js/2.7f7cdf52.chunk.js",
+    "static/js/2.7f7cdf52.chunk.js.map": "/clima-tempo/static/js/2.7f7cdf52.chunk.js.map",
+    "index.html": "/clima-tempo/index.html",
+    "precache-manifest.0020dd0349ba704708aba0c9b9597637.js": "/clima-tempo/precache-manifest.0020dd0349ba704708aba0c9b9597637.js",
+    "service-worker.js": "/clima-tempo/service-worker.js"
+  }
+}
