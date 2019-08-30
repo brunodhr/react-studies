@@ -1,7 +1,7 @@
 {
   "name": "react-clima-tempo",
   "homepage": "http://brunodhr.github.io/clima-tempo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
@@ -15,6 +15,7 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
+    "release": "standard-version",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "standard-version": "^7.0.0"
   }
 }
