@@ -1,6 +1,6 @@
 {
   "name": "react-storybook",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
@@ -9,6 +9,7 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
+    "release": "standard-version",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@babel/preset-env": "^7.4.5",
     "@storybook/react": "^5.1.9",
-    "babel-loader": "8.0.5"
+    "babel-loader": "8.0.5",
+    "standard-version": "^7.0.0"
   }
 }
