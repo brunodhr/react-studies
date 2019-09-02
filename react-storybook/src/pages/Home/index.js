@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import Button from 'components/Button';
 import { Container } from './styles';
@@ -9,6 +9,6 @@ const Home = () => (
       <Button />
     </Container>
   </>
-);
+)
 
-export default Home;
+export default Home
