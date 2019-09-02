@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Home from 'pages/Home'
+import Home from './index'
 
 storiesOf('Home', module).add('Teste de página', () => (
   <Home>
