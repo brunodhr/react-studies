@@ -1,11 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import App from './App'
+import Main from 'pages/Main'
 
-describe('App', () => {
+describe('Main', () => {
   it('should render correctly in "debug" mode', () => {
-    shallow(<App debug />)
-    // const component = shallow(<App debug />)
+    shallow(<Main debug />)
+    // const component = shallow(<Main debug />)
     // expect(component).toMatchSnapshot()
   })
 })
