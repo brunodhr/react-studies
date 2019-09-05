@@ -19,4 +19,9 @@ describe('Button', () => {
     const component = mount(<Button text='Teste' />)
     expect(component.find('button').text()).toEqual('Teste')
   })
+
+  it('should render default text', () => {
+    const component = mount(<Button />)
+    expect(component.find('button').text()).toEqual('Default')
+  })
 })
