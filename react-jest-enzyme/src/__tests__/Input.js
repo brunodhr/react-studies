@@ -9,3 +9,7 @@ it('should display an input', () => {
   const wrapper = shallow(<Input />)
   expect(wrapper.find('input').length).toBe(1)
 })
+it('should display a label', () => {
+  const wrapper = shallow(<Input />)
+  expect(wrapper.find('label').length).toBe(1)
+})
