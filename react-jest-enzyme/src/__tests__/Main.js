@@ -8,7 +8,8 @@ describe('Main', () => {
     // const component = shallow(<Main debug />)
     // expect(component).toMatchSnapshot()
   })
-  it('should render correctly the infos', () => {
+
+  it('should render page with tasks', () => {
     const username = 'Heisenberg'
     const tasks = ['Task 1', 'Task 2']
     const app = mount(<Main username={username} tasks={tasks} />)
@@ -26,5 +27,14 @@ describe('Main', () => {
         .at(1)
         .text()
     ).toEqual('Task 2')
+  })
+
+  it('should render page without tasks', () => {
+    const username = 'Heisenberg'
+    const tasks = []
+    const app = mount(<Main username={username} tasks={tasks} />)
+
+    expect(app.find('p').text()).toEqual('Welcome, Heisenberg!')
+    expect(app.find('li')).toHaveLength(0)
   })
 })
