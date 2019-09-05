@@ -7,7 +7,8 @@ const fakeDatabase = {
     '12:30pm - Meet Jesse for lunch',
     '15pm - Meet Gus at the Pollos Hermanos',
     '20pm - Dinner by the pool with Hank and Marie'
-  ]
+  ],
+  Teste: []
 }
 
 const App = ({ logged, username }) => {

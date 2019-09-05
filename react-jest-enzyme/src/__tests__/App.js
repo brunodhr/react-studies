@@ -73,4 +73,21 @@ describe('App', () => {
         .text()
     ).toEqual('20pm - Dinner by the pool with Hank and Marie')
   })
+
+  it('should render main page for logged user without tasks', () => {
+    const props = {
+      logged: true,
+      username: 'Teste'
+    }
+    const app = mount(<App {...props} />)
+
+    expect(app.find(Main)).toHaveLength(1)
+    expect(
+      app
+        .find('p')
+        .at(0)
+        .text()
+    ).toEqual('Welcome, Teste!')
+    expect(app.find('li')).toHaveLength(0)
+  })
 })
