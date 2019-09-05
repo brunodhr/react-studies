@@ -1,10 +1,16 @@
 import React from 'react'
-import Button from 'components/Button'
+import PropTypes from 'prop-types'
 
-const Main = () => (
+const Main = ({ username, tasks }) => (
   <>
-    <Button />
+    <p>Welcome, {username}!</p>
+    <ul>{tasks && tasks.map((task, index) => <li key={index}>{task}</li>)}</ul>
   </>
 )
+
+Main.propTypes = {
+  username: PropTypes.string,
+  tasks: PropTypes.array
+}
 
 export default Main
