@@ -2,9 +2,9 @@ import React from 'react'
 
 // import { Container } from './styles';
 
-const Button = () => (
+const Button = ({ text }) => (
   <>
-    <button>teste</button>
+    <button>{text}</button>
   </>
 )
 

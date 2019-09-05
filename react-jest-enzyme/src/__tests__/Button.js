@@ -8,10 +8,15 @@ describe('Button', () => {
     // const component = shallow(<Button debug />)
     // expect(component).toMatchSnapshot()
   })
+
   it('should be possible to activate button with Spacebar', () => {
     const component = mount(<Button />)
     component.find('button').simulate('keydown', { keyCode: 32 })
-    // expect(component).toMatchSnapshot()
     component.unmount()
+  })
+
+  it('should render with right text', () => {
+    const component = mount(<Button text='Teste' />)
+    expect(component.find('button').text()).toEqual('Teste')
   })
 })
