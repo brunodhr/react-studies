@@ -13,9 +13,15 @@ const getWrapper = ({ count }) =>
   )
 
 it('renders initial count', () => {
-  const wrapper = getWrapper({ count: 5 })
+  const wrapper = getWrapper()
 
-  expect(wrapper.text()).toMatch(/clicked 5 times/i)
+  expect(wrapper.text()).toMatch(/clicked 0 times/i)
+})
+
+it('renders initial count', () => {
+  const wrapper = getWrapper({ count: 10 })
+
+  expect(wrapper.text()).toMatch(/clicked 10 times/i)
 })
 
 it('increments count', () => {
