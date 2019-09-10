@@ -1,25 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './components/App/App'
-import registerServiceWorker from '../registerServiceWorker'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { urls } from './utils/urlUtils'
 import { Provider } from 'react-redux'
-import configureStore from './utils/configureStore'
-import { PersistGate } from 'redux-persist/integration/react'
+import { createStore, applyMiddleware } from 'redux'
+import reduxThunk from 'redux-thunk'
+import reducers from './reducers'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
 
-const { store, persistor } = configureStore()
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk))
 
 ReactDOM.render(
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <Router>
-        <Route path={urls.home.path} component={App} />
-      </Router>
-    </PersistGate>
+    <App />
   </Provider>,
   document.getElementById('root')
 )
-
-registerServiceWorker()
+serviceWorker.register()
