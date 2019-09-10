@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { completeToDo } from '../actions'
+import { completeToDo } from 'store/actions'
 
 class ListItem extends Component {
   completeClick = completeTodoId => {

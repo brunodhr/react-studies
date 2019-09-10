@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import data from './dataReducer'
+import data from './todos'
 
 export default combineReducers({
   data

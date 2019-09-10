@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import _ from 'lodash'
-import * as actions from '../actions'
-import ListItem from './ListItem'
-import './style.css'
+import * as actions from 'store/actions'
+import ListItem from 'components/Item'
 
 class List extends Component {
   state = {
