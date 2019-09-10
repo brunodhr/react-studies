@@ -1,4 +1,4 @@
-import { todosRef } from '../../config/firebase'
+import { todosRef } from 'config/firebase'
 import { FETCH_TODOS } from './types'
 
 export const addToDo = newToDo => async dispatch => {
