@@ -38,7 +38,9 @@ const List = () => {
       )}
       <Container>
         {todos &&
-          _.map(todos, (value, key) => <ListItem key={key} todo={value} />)}
+          _.map(todos, (value, key) => (
+            <ListItem key={key} todoId={key} todo={value} />
+          ))}
       </Container>
       <button onClick={() => setShow(!showForm)}>
         {showForm ? (
