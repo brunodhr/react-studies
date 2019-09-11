@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { complete } from 'store/thunks/todos'
+import { setComplete } from 'store/thunks/todos'
 
 import { Container, Title, Done } from './styles'
 
@@ -8,7 +8,7 @@ const ListItem = ({ todoId, todo }) => {
   const dispatch = useDispatch()
 
   function completeClick() {
-    dispatch(complete(todoId))
+    dispatch(setComplete(todoId))
   }
 
   return (

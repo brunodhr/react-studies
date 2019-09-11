@@ -1,6 +1,6 @@
 import { completeToDo, addToDo, fetchToDos } from 'store/actions/todos'
 
-export const complete = value => async dispatch => {
+export const setComplete = value => async dispatch => {
   await dispatch(completeToDo(value))
 }
 export const setTodo = value => async dispatch => {
