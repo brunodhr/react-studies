@@ -1,4 +1,13 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const rotate = keyframes`
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
+`
 
 export const Menu = styled.div`
   background-color: #505050;
@@ -14,12 +23,16 @@ export const Menu = styled.div`
 export const Logo = styled.svg`
   width: 80px;
   height: 80px;
-  fill: rgb(97, 219, 251);
   transition: 0.3s;
   opacity: 0.5;
   &:hover {
     opacity: 1;
   }
+`
+
+export const Github = styled(Logo)`
+  animation: ${rotate} infinite 20s linear;
+  fill: rgb(97, 219, 251);
 `
 
 export const Link = styled.a``
