@@ -1,82 +1,53 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { setTodo, getTodo } from 'store/thunks/todos'
+
 import _ from 'lodash'
-import * as actions from 'store/actions'
 import ListItem from 'components/Item'
 
 import { StyledInput, Symbol, Container } from './styles'
 
-class List extends Component {
-  state = {
-    showForm: false,
-    formValue: ''
+const List = () => {
+  const todos = useSelector(state => state.data)
+  const [formValue, setValue] = useState()
+  const [showForm, setShow] = useState()
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getTodo())
+  }, [dispatch])
+
+  const inputChange = event => {
+    setValue(event.target.value)
   }
 
-  inputChange = event => {
-    this.setState({ formValue: event.target.value })
-  }
-
-  formSubmit = event => {
-    const { formValue } = this.state
-    const { addToDo } = this.props
+  const formSubmit = event => {
     event.preventDefault()
-    addToDo({ title: formValue })
-    this.setState({ formValue: '' })
+    dispatch(setTodo({ title: formValue }))
+    setValue('')
   }
 
-  renderForm = () => {
-    const { showForm, formValue } = this.state
-    if (showForm) {
-      return (
-        <form onSubmit={this.formSubmit}>
-          <StyledInput
-            value={formValue}
-            onChange={this.inputChange}
-            type='text'
-          />
-          <label>What Next?</label>
+  return (
+    <>
+      {showForm && (
+        <form onSubmit={formSubmit}>
+          <StyledInput value={formValue} onChange={inputChange} type='text' />
+          <button type='submit'>submit</button>
         </form>
-      )
-    }
-  }
-  renderToDo() {
-    const { data } = this.props
-    const toDos = _.map(data, (value, key) => {
-      return <ListItem key={key} todoId={key} todo={value} />
-    })
-    if (!_.isEmpty(toDos)) {
-      return toDos
-    }
-    return <h4>You have no more things ToDo!</h4>
-  }
-  componentWillMount() {
-    this.props.fetchToDos()
-  }
-  render() {
-    const { showForm } = this.state
-    return (
-      <>
-        {this.renderForm()}
-        <Container>{this.renderToDo()}</Container>
-        <button onClick={() => this.setState({ showForm: !showForm })}>
-          {showForm ? (
-            <Symbol>Remover Todo</Symbol>
-          ) : (
-            <Symbol>Adicionar ToDo</Symbol>
-          )}
-        </button>
-      </>
-    )
-  }
+      )}
+      <Container>
+        {todos &&
+          _.map(todos, (value, key) => <ListItem key={key} todo={value} />)}
+      </Container>
+      <button onClick={() => setShow(!showForm)}>
+        {showForm ? (
+          <Symbol>Remover ToDo</Symbol>
+        ) : (
+          <Symbol>Adicionar ToDo</Symbol>
+        )}
+      </button>
+    </>
+  )
 }
-
-const mapStateToProps = ({ data }) => {
-  return {
-    data
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  actions
-)(List)
+export default List
