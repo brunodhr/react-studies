@@ -1,25 +1,22 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { completeToDo } from 'store/actions'
+import React from 'react'
+import { useDispatch } from 'react-redux'
+import { complete } from 'store/thunks/todos'
 
 import { Container, Title, Done } from './styles'
-class ListItem extends Component {
-  completeClick = completeTodoId => {
-    const { completeToDo } = this.props
-    completeToDo(completeTodoId)
+
+const ListItem = ({ todoId, todo }) => {
+  const dispatch = useDispatch()
+
+  function completeClick() {
+    dispatch(complete(todoId))
   }
-  render() {
-    const { todoId, todo } = this.props
-    return (
-      <Container>
-        <Title>{todo.title}</Title>
-        <Done onClick={() => this.completeClick(todoId)}>Done</Done>
-      </Container>
-    )
-  }
+
+  return (
+    <Container>
+      <Title>{todo.title}</Title>
+      <Done onClick={completeClick}>Done</Done>
+    </Container>
+  )
 }
 
-export default connect(
-  null,
-  { completeToDo }
-)(ListItem)
+export default ListItem
