@@ -6,7 +6,6 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     outline: none;
-    @import url('https://fonts.googleapis.com/css?family=Roboto');
     font-family: 'Roboto', sans-serif;
     color:#fff;
   }
