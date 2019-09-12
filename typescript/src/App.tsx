@@ -1,11 +1,11 @@
 import React from 'react'
-import logo from './logo.svg';
+import GlobalStyle from './styles'
 
 import Layout from 'components/Layout'
 
 const App: React.FC = () => (
   <>
-        <img src={logo} className="App-logo" alt="logo" />
+    <GlobalStyle />
     <Layout />
   </>
 )
