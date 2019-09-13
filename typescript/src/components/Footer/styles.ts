@@ -1,15 +1,7 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-  background-color: #505050;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-`
-
 export const Menu = styled.div`
-  min-height: 100px;
+  min-height: 50px;
   background-color: #505050;
   display: flex;
   justify-content: space-between;
