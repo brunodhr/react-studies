@@ -4,10 +4,14 @@ import * as S from './styles'
 
 import Shirt from 'components/Shirt'
 
-const Card: React.FC = () => (
+type CardProps = {
+  color?: string
+}
+
+const Card: React.FC<CardProps> = ({ color }) => (
   <S.Wrapper>
     <S.Container>
-      <Shirt />
+      <Shirt color={color} />
     </S.Container>
   </S.Wrapper>
 )

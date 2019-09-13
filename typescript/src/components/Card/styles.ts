@@ -19,8 +19,5 @@ export const Container = styled.div`
   transition: 0.3s;
   &:hover {
     opacity: 0.8;
-    svg {
-      fill: #505050;
-    }
   }
 `
