@@ -6,7 +6,7 @@ const FadeInAnimation = keyframes`
 `
 
 export const Sample = styled.svg`
-  fill: #505050;
+  fill: ${props => props.color || '#505050'};
   height: 100%;
   width: 100%;
   animation-duration: 3s;
