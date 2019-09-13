@@ -9,14 +9,14 @@ const Home: React.FC = () => (
   <>
     <Layout>
       <S.Container>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card color='blue' />
+        <Card color='red' />
+        <Card color='green' />
+        <Card color='brown' />
+        <Card color='white' />
+        <Card color='orange' />
+        <Card color='pink' />
+        <Card color='purple' />
         <Card />
         <Card />
         <Card />
