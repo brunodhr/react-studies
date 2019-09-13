@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as S from './styles'
 
-const Menu = () => {
+const Menu: React.FC = () => {
   return (
     <S.Menu>
       <S.Link href='https://github.com/brunodhr' target='blank'>
