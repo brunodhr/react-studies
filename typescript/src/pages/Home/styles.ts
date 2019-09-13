@@ -11,4 +11,7 @@ export const Container = styled.div`
   &::-webkit-scrollbar-thumb {
     background: #505050;
   }
+  @media (min-width: 320px) and (max-width: 425px) {
+    height: calc(100vh - 130px);
+  }
 `
