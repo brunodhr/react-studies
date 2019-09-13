@@ -17,10 +17,13 @@ export const Menu = styled.div`
   padding: 0 20%;
   @media (min-width: 320px) and (max-width: 425px) {
     flex-direction: column;
+    max-height: 80px;
+    overflow: hidden;
   }
 `
 
 export const Logo = styled.svg`
+  padding: 10px;
   width: 80px;
   height: 80px;
   transition: 0.3s;
