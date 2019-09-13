@@ -17,4 +17,8 @@ export const Sample = styled.svg`
   animation-play-state: running;
   animation-name: ${FadeInAnimation};
   display: block;
+  //to do: make responsive
+  @media (min-width: 320px) and (max-width: 425px) {
+    display: none;
+  }
 `
