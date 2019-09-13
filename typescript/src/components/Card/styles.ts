@@ -11,7 +11,16 @@ export const Wrapper = styled.div`
   }
 `
 export const Container = styled.div`
+  cursor: pointer;
   padding: 10px;
-  background-color: black;
   height: 150px;
+  background-color: black;
+  opacity: 0.5;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+    svg {
+      fill: #505050;
+    }
+  }
 `
