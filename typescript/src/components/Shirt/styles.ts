@@ -8,6 +8,7 @@ const FadeInAnimation = keyframes`
 export const Sample = styled.svg`
   fill: #505050;
   height: 100%;
+  width: 100%;
   animation-duration: 3s;
   animation-timing-function: ease;
   animation-delay: 0s;
@@ -17,8 +18,4 @@ export const Sample = styled.svg`
   animation-play-state: running;
   animation-name: ${FadeInAnimation};
   display: block;
-  //to do: make responsive
-  @media (min-width: 320px) and (max-width: 425px) {
-    display: none;
-  }
 `
