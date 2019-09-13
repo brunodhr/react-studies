@@ -38,4 +38,8 @@ export const Github = styled(Logo)`
   fill: rgb(97, 219, 251);
 `
 
+export const Pagarme = styled(Logo)`
+  width: 150px;
+`
+
 export const Link = styled.a``
