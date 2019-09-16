@@ -9,6 +9,7 @@
     "@types/react-dom": "16.9.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "styled-components": "^4.3.2",
     "typescript": "3.6.3"
@@ -35,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^4.3.5",
     "@types/styled-components": "^4.1.19",
     "tslint": "^5.20.0",
     "tslint-react": "^4.0.0"
