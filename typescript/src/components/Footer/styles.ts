@@ -8,7 +8,7 @@ export const Menu = styled.div`
   min-height: 50px;
   background-color: #505050;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   padding: 0 20%;
   @media (min-width: 320px) and (max-width: 425px) {
@@ -17,3 +17,15 @@ export const Menu = styled.div`
 `
 
 export const Link = styled.a``
+
+export const Icon = styled.svg`
+  fill: #61dafb;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  opacity: 0.4;
+  transition: 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+`
