@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 export const Menu = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   min-height: 50px;
   background-color: #505050;
   display: flex;
