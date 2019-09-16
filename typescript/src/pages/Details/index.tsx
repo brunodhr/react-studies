@@ -1,13 +1,17 @@
 import React from 'react'
 
-import Card from 'components/Card'
+import Shirt from 'components/Shirt'
 
 import * as S from './styles'
 
-const Details: React.FC = () => (
+type DetailsProps = {
+  color?: string
+}
+
+const Details: React.FC<DetailsProps> = ({ color }) => (
   <>
     <S.Container>
-      <Card />
+      <Shirt color={color} />
     </S.Container>
   </>
 )
