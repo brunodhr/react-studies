@@ -11,7 +11,9 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({ color }) => (
   <S.Wrapper>
     <S.Container>
-      <Shirt color={color} />
+      <S.Link href='/product/1'>
+        <Shirt color={color} />
+      </S.Link>
     </S.Container>
   </S.Wrapper>
 )

@@ -11,7 +11,6 @@ export const Wrapper = styled.div`
   }
 `
 export const Container = styled.div`
-  cursor: pointer;
   padding: 10px;
   height: 150px;
   background-color: black;
@@ -21,3 +20,4 @@ export const Container = styled.div`
     opacity: 0.8;
   }
 `
+export const Link = styled.a``
