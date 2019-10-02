@@ -5,7 +5,7 @@ import {
 } from 'store/actions/current'
 import API from 'utils/api'
 
-const token = '20ccac099a5b9d1392fd4c0048e3ff7c'
+const token = process.env.REACT_APP_API_TOKEN
 
 export const getCurrent = () => async dispatch => {
   dispatch(setCurrentRequest())
