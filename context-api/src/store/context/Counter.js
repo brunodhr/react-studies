@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import createUseContext from 'constate'
+import createStore from 'utils/useCreateStore'
 
 function useCounter() {
   const [count, setCount] = useState(0)
@@ -8,4 +8,4 @@ function useCounter() {
   return { count, increment, decrement }
 }
 
-export const useCounterContext = createUseContext(useCounter)
+export const useCounterContext = createStore(useCounter)
