@@ -1,7 +1,11 @@
 'use strict'
 
-function sum(val1, val2) {
-  return val1 + val2
+var React = require('react')
+
+class Title extends React.Component {
+  render() {
+    return <h1>Titulo</h1>
+  }
 }
 
-module.exports = sum
+export default Title
