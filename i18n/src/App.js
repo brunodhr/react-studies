@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import { en, pt } from 'locales'
+import { useTranslation } from 'react-i18next'
 
 function App() {
-  const [lang, setLang] = useState('en')
+  const { t, i18n } = useTranslation()
+
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng)
+  }
 
   return (
-    <>
-      <button onClick={() => setLang('pt')}>pt</button>
-      <button onClick={() => setLang('en')}>en</button>
-      <p>{lang}</p>
-    </>
+    <div>
+      <button onClick={() => changeLanguage('pt')}>pt</button>
+      <button onClick={() => changeLanguage('en')}>en</button>
+      <div>{t('title')}</div>
+    </div>
   )
 }
 
