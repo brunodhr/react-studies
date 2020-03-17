@@ -1,10 +1,8 @@
-import React from 'react';
-import Form from 'pages/Form';
+import React from 'react'
+import { SignIn } from 'pages'
 
-const App = () => (
-  <>
-    <Form />
-  </>
-);
+function App() {
+  return <SignIn />
+}
 
-export default App;
+export default App
